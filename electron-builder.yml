@@ -1,0 +1,20 @@
+appId: com.hobby.tv
+productName: Hobby TV
+directories:
+  output: dist-electron-builder
+  buildResources: build
+files:
+  - dist/**/*
+  - electron/build/**/*
+  - package.json
+mac:
+  target: dmg
+  category: public.app-category.entertainment
+win:
+  target: nsis
+linux:
+  target:
+    - AppImage
+    - snap
+    - deb
+  category: Video
